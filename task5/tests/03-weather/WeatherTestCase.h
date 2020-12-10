@@ -5,6 +5,3 @@
 
 class WeatherTestCase : public ::testing::Test {
 };
-
-
-

@@ -8,7 +8,6 @@
 #include <Weather.h>
 
 class WeatherMock : public Weather {
+public:
+    MOCK_METHOD(cpr::Response, Get, (const std::string& city), (override));
 };
-
-
-
