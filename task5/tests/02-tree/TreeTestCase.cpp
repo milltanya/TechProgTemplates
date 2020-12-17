@@ -8,7 +8,7 @@
 #include "TreeTestCase.h"
 #include "Tree.h"
 
-TreeTestCase::TreeTestCase() {
+void TreeTestCase::SetUp() {
     test_data_path = "test_data";
     while (boost::filesystem::exists(test_data_path)) {
         test_data_path += "_";
@@ -37,7 +37,7 @@ TreeTestCase::TreeTestCase() {
     test_data_dirs_only = {test_data_path, true, {dir_dirs_only}};
 }
 
-TreeTestCase::~TreeTestCase() {
+void TreeTestCase::TearDown() {
     boost::filesystem::remove_all(test_data_path);
 }
 

@@ -12,8 +12,8 @@
 
 class TreeTestCase : public ::testing::Test {
 public:
-    TreeTestCase();
-    ~TreeTestCase() override;
+    void SetUp();
+    void TearDown() override;
 
 protected:
     std::string test_data_path;
